@@ -1,0 +1,30 @@
+{
+  "name": "curlnsave",
+  "version": "0.1.0",
+  "description": "Node module to curl a remote url and cache locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "homepage": "https://github.com/skoranga/node-curlnsave",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:skoranga/node-curlnsave.git"
+  },
+  "keywords": [
+    "curl",
+    "nodejs"
+  ],
+  "author": "Sanjeev Koranga",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "needle": "~0.7.1"
+  },
+  "devDependencies": {
+    "mocha": "^1",
+    "chai": "^1.9",
+    "fs-extra": "~0.9.1",
+    "jshint": "*"
+  }
+}
