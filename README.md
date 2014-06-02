@@ -17,7 +17,8 @@ Node module to curl a remote url and cache locally
 
     // first time this call will download and cache the url &
     // subsequent calls will use the cached copy.
-    curl.fetch(uri, function (err, data) {
+    // result { name: 'local name', data: 'data body', isFromCache: true|false}
+    curl.fetch(uri, function (err, result) {
         ...
         ...
     });

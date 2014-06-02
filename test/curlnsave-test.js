@@ -39,10 +39,11 @@ describe('curlnsave', function () {
             filename = path.basename(filename);
             location = path.join(testOutDir, filename);
 
-            curl.fetch(uri, function (err, data, fromCache) {
+            curl.fetch(uri, function (err, result) {
                 assert.isNotObject(err);
-                assert.isDefined(data);
-                assert.isFalse(fromCache);
+                assert.isDefined(result.name);
+                assert.isDefined(result.data);
+                assert.isFalse(result.isFromCache);
                 assert.isTrue(fs.existsSync(location));
 
                 next();
@@ -58,10 +59,11 @@ describe('curlnsave', function () {
             filename = 'smurf.txt';
             location = path.join(testOutDir, filename);
 
-            curl.fetch(uri, filename, function (err, data, fromCache) {
+            curl.fetch(uri, filename, function (err, result) {
                 assert.isNotObject(err);
-                assert.isDefined(data);
-                assert.isFalse(fromCache);
+                assert.isDefined(result.name);
+                assert.isDefined(result.data);
+                assert.isFalse(result.isFromCache);
                 assert.isTrue(fs.existsSync(location));
 
                 next();
@@ -77,10 +79,11 @@ describe('curlnsave', function () {
             filename = 'smurf.txt';
             location = path.join(testOutDir, filename);
 
-            curl.fetch(uri, filename, function (err, data, fromCache) {
+            curl.fetch(uri, filename, function (err, result) {
                 assert.isNotObject(err);
-                assert.isDefined(data);
-                assert.isTrue(fromCache);
+                assert.isDefined(result.name);
+                assert.isDefined(result.data);
+                assert.isTrue(result.isFromCache);
                 assert.isTrue(fs.existsSync(location));
 
                 next();
