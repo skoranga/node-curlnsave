@@ -9,7 +9,8 @@ var fs = require('fs-extra'),
 
 var URLS = {
     sample1: 'https://github.com/skoranga',
-    sample2: 'http://www.ebay.com'
+    sample2: 'http://www.ebay.com',
+    sample3: 'http://this.is.invalid.url/test.html'
 };
 
 
@@ -85,6 +86,25 @@ describe('curlnsave', function () {
                 assert.isDefined(result.data);
                 assert.isTrue(result.isFromCache);
                 assert.isTrue(fs.existsSync(location));
+
+                next();
+            });
+        });
+
+        it('should fail for invalid urls', function (next) {
+            this.timeout(5000);
+            var uri, filename, location;
+
+            uri = URLS.sample3;
+            filename = url.parse(uri).pathname;
+            filename = path.basename(filename);
+            location = path.join(testOutDir, filename);
+
+            curl.fetch(uri, function (err, result) {
+                assert.isObject(err);
+                assert.ok(result.name);
+                assert.ok(!result.data);
+                assert.isFalse(fs.existsSync(location));
 
                 next();
             });
