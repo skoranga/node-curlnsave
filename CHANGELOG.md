@@ -1,3 +1,6 @@
+### 0.1.5
+ - passing followRedirect: false to request module
+
 ### 0.1.4
  - failing for non 200 statusCodes
 
