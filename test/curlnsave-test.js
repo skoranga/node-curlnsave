@@ -21,13 +21,13 @@ describe('curlnsave', function () {
         var curl, testOutDir = './test/tempfolder';
 
         before(function () {
-            fs.deleteSync(testOutDir);
+            fs.removeSync(testOutDir);
             curl = curlnsave.create({ outdir: testOutDir });
         });
 
 
         after(function () {
-            fs.deleteSync(testOutDir);
+            fs.removeSync(testOutDir);
         });
 
 
