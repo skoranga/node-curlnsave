@@ -19,12 +19,12 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "fs-extra": "~0.16",
-    "request": "~2.53"
+    "fs-extra": "~0.26",
+    "request": "~2.67"
   },
   "devDependencies": {
-    "mocha": "^1",
-    "chai": "^1",
+    "mocha": "^2",
+    "chai": "^2",
     "jshint": "^2"
   }
 }
