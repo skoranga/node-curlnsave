@@ -101,7 +101,7 @@ describe('curlnsave', function () {
             location = path.join(testOutDir, filename);
 
             curl.fetch(uri, function (err, result) {
-                assert.isObject(err);
+                assert.ok(err);
                 assert.ok(result.name);
                 assert.ok(!result.data);
                 assert.isFalse(fs.existsSync(location));
