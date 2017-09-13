@@ -1,3 +1,7 @@
+### 0.2.0
+ - Allow passing require module option in place of uri
+ - update dependencies
+
 ### 0.1.5
  - passing followRedirect: false to request module
 
