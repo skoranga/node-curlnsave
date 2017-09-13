@@ -54,13 +54,13 @@ describe('curlnsave', function () {
 
         it('should support an optional local name', function (next) {
             this.timeout(5000);
-            var uri, filename, location;
+            var options, filename, location;
 
-            uri = URLS.sample2;
+            options = { url: URLS.sample2 };
             filename = 'smurf.txt';
             location = path.join(testOutDir, filename);
 
-            curl.fetch(uri, filename, function (err, result) {
+            curl.fetch(options, filename, function (err, result) {
                 assert.isNotObject(err);
                 assert.isDefined(result.name);
                 assert.isDefined(result.data);
