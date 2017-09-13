@@ -9,7 +9,7 @@ var fs = require('fs-extra'),
 
 var URLS = {
     sample1: 'https://github.com/skoranga',
-    sample2: 'http://www.ebay.com',
+    sample2: 'http://www.example.com',
     sample3: 'http://this.is.invalid.url/test.html'
 };
 
