@@ -1,6 +1,6 @@
 {
   "name": "curlnsave",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node module to curl a remote url and cache locally",
   "main": "index.js",
   "scripts": {
@@ -20,11 +20,11 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "fs-extra": "^4",
+    "fs-extra": "^8",
     "request": "^2.72"
   },
   "devDependencies": {
-    "mocha": "^3",
+    "mocha": "^8",
     "chai": "^4",
     "jshint": "^2"
   }

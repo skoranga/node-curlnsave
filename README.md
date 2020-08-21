@@ -4,7 +4,7 @@ node-curlnsave
 [![Build Status](https://travis-ci.org/skoranga/node-curlnsave.png)](https://travis-ci.org/skoranga/node-curlnsave)
 
 
-Node module to curl a remote url and cache locally
+Node module to curl a remote url and cache response locally
 
 
 ### Usage
